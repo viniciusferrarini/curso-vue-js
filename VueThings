@@ -1,0 +1,24 @@
+Entendendo a Instância Vue
+
+Uma página pode ter mais que uma instância vue?
+R: Sim, pode ter
+Você consegue alterar dados de outra instância vue?
+R: Sim, porem não é recomendado
+
+Propriedades Reativas
+Através dos getters e setters reativos que fazem com que no momento em que as variáveis for alterada ou lida, o vue tem consciência disso sabe exatamente quando isso acontece e dispara as alterações reativas reagindo as alterações que aconteceram nos dados
+
+evitar o uso de $nomeVariavel.
+
+Como o VueJS atualiza a DOM - AULA 81 - MUITO IMPORTANTE
+
+O vue monitora as mudanças que acontecem nos dados a partir de funções eventos e dados informados pelo usuário e atualiza a DOM quando necessário.
+
+O Vue não atualiza toda a DOM diretamente, entre a instancia VueJS e a DOM temos a VirtualDOM.
+
+A virtual DOM é uma replica exata da DOM real em código javascript. Ela monitora a instancia vue, verificando quais dados foram alterados. Caso 
+essas mudanças de fato aconteceram, as mesmas são replicadas para o DOM Real. O Vue trabalha dessa forma, pois trabalhar diretamente
+no lado javascript é mais rapido do que manipular a DOM Real.
+
+Por exemplo no caso de uma lista de 100 itens, o item 60 foi alterado. O virtual dom aplica uma alteração diretamente no registro 60,
+não recarregando toda a lista, e então efetivando esta unica alteração na DOM real garantindo um desempenho muito melhor a aplicação.

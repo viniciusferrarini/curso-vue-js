@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{titulo}}</p>
+    <!-- 
+        o v-bind é one-way data bind. Por exemplo, no
+        input abaixo, caso o usuário insira outra informação, a variavel titulo não será alterada.
+     -->
+    <input type="text" v-bind:value="titulo" />
+    <!-- 
+        o v-model é two-way databind. Indiferente se o valor for alterado pelo usuário ou na variavel 
+        ambos serão impactados
+     -->
+    <input type="text" v-model:value="titulo" />
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJS'
+        }
+    });
+</script>
